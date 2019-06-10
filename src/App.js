@@ -4,7 +4,7 @@ import ApiSG from './ApiSG';
 
 function App() {
   return (
-    <div className="App">
+    <div className='container'>
       <h2>welcome</h2>
       <ApiSG />
     </div>

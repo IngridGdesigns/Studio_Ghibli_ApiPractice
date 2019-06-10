@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Card from 'react-bootstrap/Card'
 
 class ApiSG extends Component{
     constructor(props){
@@ -25,10 +26,11 @@ class ApiSG extends Component{
            <div className='App'>
                 {this.state.loading || !this.state.films ? <h4>hello Api</h4> : 
                this.state.films.map((movie ) => 
-               <div  key={movie.id}>
+               <div className='row'  key={movie.id}>
+                   <div className='column'>
                    <h2>{movie.title}</h2>
                    <p>{movie.description}</p>
-
+                   </div>
                </div>)}
               <h1>hello  now</h1>
            </div>
