@@ -21,8 +21,16 @@ class ApiSG extends Component{
        
        console.log(this.state.films)
        return(
-           <div>
-              <h1>hello</h1>
+           
+           <div className='App'>
+                {this.state.loading || !this.state.films ? <h4>hello Api</h4> : 
+               this.state.films.map((movie ) => 
+               <div  key={movie.id}>
+                   <h2>{movie.title}</h2>
+                   <p>{movie.description}</p>
+
+               </div>)}
+              <h1>hello  now</h1>
            </div>
        )
    }
